@@ -1,1 +1,5 @@
+tailwind docs :
 https://nerdcave.com/tailwind-cheat-sheet
+
+git submodule :
+https://www.atlassian.com/git/tutorials/git-submodule
