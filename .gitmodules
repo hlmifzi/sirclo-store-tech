@@ -1,0 +1,3 @@
+[submodule "src/components/base"]
+	path = src/components/base
+	url = git@github.com:hlmifzi/sirclo-tesct-ui-component.git
