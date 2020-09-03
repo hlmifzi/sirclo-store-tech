@@ -1,18 +1,32 @@
 import React from 'react'
+
+import useHome from './hook/useHome'
+
 import { Header } from '../../components/base/src/components/headers/Header'
+import { Carousel } from '../../components/base/src/components/carousel/Carousel'
+import { Slicker } from '../../components/base/src/components/slickers/Slicker'
+import { useDidMount } from '../../utils/componentLifeCycle'
 
 const Home = () => {
+    const { popular_in_woman, popular_in_men, popular_in_accessories, banner } = useHome().state
+    const { _getBanner, _getMenProduct, _getWomanProduct, _getAccessoriesProduct } = useHome().action
+
+    useDidMount(() => {
+        _getBanner()
+        _getMenProduct()
+        _getWomanProduct()
+        _getAccessoriesProduct()
+    })
+
     return (
         <>
             <Header />
-            <div className="h-64">
-                <div className="p-4 m-4 bg-green-600">
-                    <h1 className="text-2xl font-bold text-white" >judul</h1>
-                </div>
-                <div className="p-4 m-4 bg-green-300 h-full">
-                    <h1 className="text-2xl font-bold text-white" >aasdasd</h1>
-                </div>
+            <div className="px-16">
+                <Carousel />
             </div>
+            <Slicker />
+            <Slicker />
+            <Slicker />
         </>
     )
 }
