@@ -13,6 +13,12 @@ $ git submodule update --init
 $ git submodule update --remote
 ```
 
+### `state management`
+- reinspect
+- context and custom hooks
+- you can see change state in redux dev tools 
+  https://ibb.co/bjhwB9x
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
