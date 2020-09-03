@@ -11,3 +11,96 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+:root {
+  --n-000: #ffffff;
+  --n-100: #fdfdfd;
+  --n-200: #fafafa;
+  --n-300: #f5f5f5;
+  --n-400: #e2e2e2;
+  --n-500: #d6d6d6;
+  --n-600: #b8b8b8;
+  --n-700: #888888;
+  --n-800: #5e5e5e;
+  --n-900: #323232;
+
+  --v-100: #fbf5ff;
+  --v-200: #f8ebfe;
+  --v-300: #e9c7f9;
+  --v-400: #aa71e8;
+  --v-500: #8645da;
+  --v-600: #5e20b3;
+  --v-700: #3b1470;
+  --v-800: #2f1059;
+  --v-900: #1c003b;
+
+  --p-100: #fff3f8;
+  --p-200: #ffe8f0;
+  --p-300: #ffc6d9;
+  --p-400: #ff8db3;
+  --p-500: #ff538e;
+  --p-600: #ff1a68;
+  --p-700: #df175b;
+  --p-800: #9f1041;
+  --p-900: #600a27;
+
+  --g-100: #e7fceb;
+  --g-200: #cef8d7;
+  --g-300: #b6f5c2;
+  --g-400: #85ef9a;
+  --g-500: #3ce55d;
+  --g-600: #0bde35;
+  --g-700: #089b25;
+  --g-800: #066f1b;
+  --g-900: #034310;
+
+  --y-100: #fff7e6;
+  --y-200: #ffeecc;
+  --y-300: #ffe6b3;
+  --y-400: #ffd580;
+  --y-500: #ffbc33;
+  --y-600: #ffab00;
+  --y-700: #e69a00;
+  --y-800: #805600;
+  --y-900: #4c3300;
+
+  --r-100: #fcefec;
+  --r-200: #fae4df;
+  --r-300: #f3b8a9;
+  --r-400: #ec8e76;
+  --r-500: #e66848;
+  --r-600: #de350b;
+  --r-700: #a62808;
+  --r-800: #6f1b05;
+  --r-900: #370d03;
+
+  --b-100: #eff5ff;
+  --b-200: #dfecff;
+  --b-300: #b3d1ff;
+  --b-400: #99c1ff;
+  --b-500: #3384ff;
+  --b-600: #0065ff;
+  --b-700: #0051cc;
+  --b-800: #003380;
+  --b-900: #001e4c;
+
+  --xx-small: 4px;
+  --x-small: 8px;
+  --small: 12px;
+  --medium: 16px;
+  --large: 24px;
+  --x-large: 40px;
+  --xx-large: 64px;
+
+  --bs-flat: none;
+  --bs-raised: 1px 1px 3px 0 rgba(47, 49, 54, 0.2);
+  --bs-overlay: 0 4px 8px 0 rgba(47, 49, 54, 0.2);
+  --bs-sticky-nav: 0 6px 12px 0 rgba(47, 49, 54, 0.2);
+  --bs-temp-nav: 0 8px 16px 0 rgba(47, 49, 54, 0.2);
+  --bs-pop-out: 0 12px 24px 0 rgba(47, 49, 54, 0.2);
+
+  --bl-light: solid 1px var(--n-400);
+  --bl-dark: solid 1px var(--n-500);
+  --bl-purple: solid 1px var(--v-600);
+}
