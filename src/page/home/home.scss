@@ -1,0 +1,24 @@
+.three__image{
+    display: flex;
+    flex-direction: row;
+    img{
+        flex: auto;
+    } 
+}
+
+.description__shop {
+    border-top: 2px solid  var(--n-600)
+}
+
+.subcribe__section{
+    background-color: var(--n-300);
+    height: 96px;
+}
+
+.image__section{
+    display: flex;
+    flex-direction: row;
+    img{
+        flex: auto;
+    }
+}
