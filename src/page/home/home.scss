@@ -22,3 +22,19 @@
         flex: auto;
     }
 }
+
+.footer__section{
+    background-color: var(--n-000);
+    height: 450px;
+    .description{
+        flex: 0.4;
+        font-size: 9pt;
+        line-height: 2rem;
+    }
+
+    .fast__menu > p  {
+        font-size: 9pt;
+;    }
+}
+
+
