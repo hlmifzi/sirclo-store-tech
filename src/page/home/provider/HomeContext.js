@@ -10,7 +10,8 @@ const HomeProvider = (props) => {
         popular_in_womens: [],
         popular_in_mens: [],
         popular_in_accessories: [],
-        banners: []
+        banners: [],
+        showModalProduct: false
     }
 
     //this is state managent like redux you can use redux dev tools "Home"
