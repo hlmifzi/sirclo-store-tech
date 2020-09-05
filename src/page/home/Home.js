@@ -17,8 +17,8 @@ import {
 
 import './home.scss'
 const Home = () => {
-    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners, showModalProduct, isLoading } = useHome().state
-    const { _getBanner, _getMenProduct, _getWomanProduct, _getAccessoriesProduct } = useHome().action
+    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners, showModalProduct, isLoading, product } = useHome().state
+    const { _getBanner, _getMenProduct, _getWomanProduct, _getAccessoriesProduct, _openModal, _closeModal } = useHome().action
 
     useDidMount(() => {
         _getBanner()
@@ -38,6 +38,12 @@ const Home = () => {
         { title: 'LOOK BOOK', url: 'https://www.linkedin.com/in/helmi-fauzi-12b872143/' },
     ]
 
+    const functionOpenAndCloseModal = {
+        _openModal,
+        _closeModal,
+        product
+    }
+
     return (
 
         <>
@@ -51,9 +57,9 @@ const Home = () => {
             }
 
             <ThreeImage />
-            <Slicker title="POPULAR IN WOMEN" listProducts={popular_in_womens} slickerId={`POPULAR_IN_WOMEN`} />
-            <Slicker title="POPULAR IN MEN" listProducts={popular_in_mens} slickerId={`POPULAR_IN_MEN`} />
-            <Slicker title="POPULAR IN ACCESSORIES" listProducts={popular_in_accessories} slickerId={`POPULAR_IN_ACCESSORIES`} />
+            <Slicker title="POPULAR IN WOMEN" listProducts={popular_in_womens} slickerId={`POPULAR_IN_WOMEN`} {...functionOpenAndCloseModal} />
+            <Slicker title="POPULAR IN MEN" listProducts={popular_in_mens} slickerId={`POPULAR_IN_MEN`} {...functionOpenAndCloseModal} />
+            <Slicker title="POPULAR IN ACCESSORIES" listProducts={popular_in_accessories} slickerId={`POPULAR_IN_ACCESSORIES`} {...functionOpenAndCloseModal} />
 
             <FooterDescription />
             <FooterSubcribe />
@@ -61,7 +67,7 @@ const Home = () => {
             <Footer />
 
             {
-                showModalProduct && <Modal />
+                showModalProduct && <Modal  {...functionOpenAndCloseModal} />
             }
         </>
     )
