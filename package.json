@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "npm run build:style && react-scripts start",
-    "build": "npm run build:style && react-scripts build",
+    "build": "git submodule update --init && git submodule update --remote && npm run build:style && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:style": "postcss src/scss/tailwind.scss -o src/scss/main.scss"
