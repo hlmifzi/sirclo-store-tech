@@ -11,12 +11,13 @@ import {
     FooterDescription,
     Footer,
     FooterSubcribe,
-    FooterImage
+    FooterImage,
+    Skeleton
 } from '../../components/base'
 
 import './home.scss'
 const Home = () => {
-    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners, showModalProduct } = useHome().state
+    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners, showModalProduct, isLoading } = useHome().state
     const { _getBanner, _getMenProduct, _getWomanProduct, _getAccessoriesProduct } = useHome().action
 
     useDidMount(() => {
@@ -38,11 +39,17 @@ const Home = () => {
     ]
 
     return (
+
         <>
             <Header menus={menus} />
-            <div className="px-16">
-                <Carousel imageLists={banners} />
-            </div>
+            {
+                isLoading ? <Skeleton /> : (
+                    <div className="px-16">
+                        <Carousel imageLists={banners} />
+                    </div>
+                )
+            }
+
             <ThreeImage />
             <Slicker title="POPULAR IN WOMEN" listProducts={popular_in_womens} slickerId={`POPULAR_IN_WOMEN`} />
             <Slicker title="POPULAR IN MEN" listProducts={popular_in_mens} slickerId={`POPULAR_IN_MEN`} />
@@ -51,11 +58,10 @@ const Home = () => {
             <FooterDescription />
             <FooterSubcribe />
             <FooterImage />
-
             <Footer />
+
             {
                 showModalProduct && <Modal />
-
             }
         </>
     )
