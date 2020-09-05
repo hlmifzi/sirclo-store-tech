@@ -1,8 +1,8 @@
-import { useContext } from "react"
+import React from "react"
 import { HomeContext } from '../provider/HomeContext'
 import { clientGet } from '../../../services/main/MainServices'
 const useHome = () => {
-    const [state, immerSetState] = useContext(HomeContext);
+    const [state, immerSetState] = React.useContext(HomeContext);
 
     const _getWomanProduct = async () => {
         const data = await clientGet('dbe98b64-6088-4351-8b0f-dc772d483de3')
