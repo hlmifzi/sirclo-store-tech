@@ -32,6 +32,21 @@ const useHome = () => {
         })
     }
 
+    const _openModal = (product) => {
+        immerSetState(draft => {
+            draft.showModalProduct = true
+            draft.product = product
+        })
+    }
+
+    const _closeModal = () => {
+        immerSetState(draft => {
+            draft.showModalProduct = false
+            draft.product = ''
+
+        })
+    }
+
     return {
         state,
         action: {
@@ -39,6 +54,8 @@ const useHome = () => {
             _getWomanProduct,
             _getAccessoriesProduct,
             _getBanner,
+            _openModal,
+            _closeModal
         }
     };
 }

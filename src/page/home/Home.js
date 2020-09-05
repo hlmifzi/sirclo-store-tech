@@ -16,7 +16,7 @@ import {
 
 import './home.scss'
 const Home = () => {
-    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners } = useHome().state
+    const { popular_in_womens, popular_in_mens, popular_in_accessories, banners, showModalProduct } = useHome().state
     const { _getBanner, _getMenProduct, _getWomanProduct, _getAccessoriesProduct } = useHome().action
 
     useDidMount(() => {
@@ -37,13 +37,15 @@ const Home = () => {
             <Slicker title="POPULAR IN MEN" listProducts={popular_in_mens} slickerId={`POPULAR_IN_MEN`} />
             <Slicker title="POPULAR IN ACCESSORIES" listProducts={popular_in_accessories} slickerId={`POPULAR_IN_ACCESSORIES`} />
 
-
             <FooterDescription />
             <FooterSubcribe />
             <FooterImage />
 
             <Footer />
-            <Modal />
+            {
+                showModalProduct && <Modal />
+
+            }
         </>
     )
 }
