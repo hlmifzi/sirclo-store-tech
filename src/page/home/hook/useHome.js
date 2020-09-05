@@ -49,6 +49,7 @@ const useHome = () => {
 
     return {
         state,
+        immerSetState,
         action: {
             _getMenProduct,
             _getWomanProduct,
