@@ -17,6 +17,8 @@ $ npm start
 doc for git submodule:
 https://www.atlassian.com/git/tutorials/git-submodule
 
+if cannot run submodule you can clone https://github.com/hlmifzi/sirclo-store-tech.git manually
+
 
 ### `state management`
 - reinspect
