@@ -50,7 +50,7 @@ const Home = () => {
             <Header menus={menus} />
             {
                 isLoading ? <Skeleton /> : (
-                    <div className="px-16">
+                    <div className="section__carousel px-16">
                         <Carousel imageLists={banners} />
                     </div>
                 )
