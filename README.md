@@ -1,5 +1,7 @@
 This is an React JS application, based on React Hooks & Storybook (style guide).
 
+production we site: sirclo-commerce-tech.netlify.app
+
 ## Install
 
 ⚠ Requires a node version >= 7 and an npm version >= 4 ⚠
