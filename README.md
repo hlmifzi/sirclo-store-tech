@@ -1,6 +1,6 @@
 This is an React JS application, based on React Hooks & Storybook (style guide).
 
-production we site: sirclo-commerce-tech.netlify.app
+production we site: http://sirclo-commerce-tech.netlify.app
 
 ## Install
 
